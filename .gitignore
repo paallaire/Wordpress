@@ -1,47 +1,23 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
 
-# Folder config file
-Desktop.ini
+!web/app/mu-plugins/advanced-custom-fields-pro/
+!web/app/mu-plugins/acf-options-for-polylang/
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# WordPress
+web/wp
+web/.htaccess
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Dotenv
+.env
+.env.*
+!.env.example
 
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Composer
+vendor/*
+!vendor/.gitkeep
