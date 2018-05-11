@@ -30,23 +30,30 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    { 
+      "type": "vcs", 
+      "url": "https://github.com/BeAPI/acf-options-for-polylang" 
     }
   ],
   "require": {
     "php": ">=5.6",
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.9.4",
+    "johnpbloch/wordpress": "4.9.5",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/wp-migrate-db": "^1.0",
     "wpackagist-plugin/timber-library": "^1.7",
     "wpackagist-plugin/debug-bar-timber": "^0.3.0",
     "wpackagist-plugin/polylang": "^2.3",
-    "wpackagist-plugin/wordpress-seo": "^6.3",
+    "wpackagist-plugin/wordpress-seo": "^7.2",
     "wpackagist-plugin/duplicate-post": "^3.2",
     "wpackagist-plugin/cpt-custom-icon": "^1.0",
-    "wpackagist-plugin/debug-bar": "^0.9.0"
+    "wpackagist-plugin/debug-bar": "^0.9.0",
+    "wpackagist-plugin/cf7-polylang": "^2.0",
+    "wpackagist-plugin/contact-form-7": "^5.0",
+    "wpackagist-plugin/cf7-grid-layout": "^2.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
@@ -54,7 +61,6 @@
   "extra": {
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin",
-        "wpackagist-plugin/wp-migrate-db",
         "wpackagist-plugin/polylang",
         "wpackagist-plugin/debug-bar",
         "wpackagist-plugin/debug-bar-timber",
