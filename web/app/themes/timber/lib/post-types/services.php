@@ -38,17 +38,17 @@ function services_post_type() {
 		'labels'                => $labels,
 		'supports'              => array( 'title' ),
 		'taxonomies'            => array( 'taxo_conditions' ),
-		'hierarchical'          => false,
-		'public'                => true,
+		'hierarchical'          => false, // Whether the post type is hierarchical (e.g. page). Allows Parent to be specified.
+		'public'                => false,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
+		'has_archive'           => false, // Enables post type archives. 
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => false,
 		'capability_type'       => 'page',
 		'show_in_rest'          => false,
 	);

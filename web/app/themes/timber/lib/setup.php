@@ -62,7 +62,7 @@ function setup() {
     
   }
 
-  include 'lang.php';
+  //include 'lang.php';
 
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');

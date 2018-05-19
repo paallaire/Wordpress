@@ -38,6 +38,9 @@ class SageTimberTheme extends TimberSite {
         $post = Timber::query_post();
         $context['post'] = $post;
 
+        /* Pages */
+        //$context['options']['page_histoirque'] = Timber::get_post($context['options']['page_histoirque']->ID);
+
         /* Options ACF */
         $context['options'] = get_fields('options');
 

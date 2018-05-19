@@ -16,6 +16,7 @@ $sage_includes = [
   'lib/setup.php',     // Theme setup
   'lib/titles.php',    // Page titles
   'lib/customizer.php', // Theme customizer
+  'lib/lang.php', // Theme lang (polylang)
   'lib/post-types/services.php', // Post type - services
   'lib/taxonomies/conditions.php' // Taxonomies - conditions
 ];
