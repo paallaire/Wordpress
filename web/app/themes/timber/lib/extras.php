@@ -31,3 +31,17 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+
+// ADD SVG TO WORDPRES
+//https://themeisle.com/blog/add-svg-to-wordpress/
+function add_file_types_to_uploads($file_types){
+
+  $new_filetypes = array();
+  $new_filetypes['svg'] = 'image/svg+xml';
+  $file_types = array_merge($file_types, $new_filetypes );
+
+  return $file_types;
+}
+add_action('upload_mimes', 'add_file_types_to_uploads');
+  
