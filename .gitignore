@@ -6,9 +6,6 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 
-!web/app/mu-plugins/advanced-custom-fields-pro/
-!web/app/mu-plugins/acf-options-for-polylang/
-
 # WordPress
 web/wp
 web/.htaccess
@@ -19,5 +16,4 @@ web/.htaccess
 !.env.example
 
 # Composer
-vendor/*
-!vendor/.gitkeep
+/vendor
