@@ -42,7 +42,7 @@ class SageTimberTheme extends TimberSite {
         //$context['options']['page_histoirque'] = Timber::get_post($context['options']['page_histoirque']->ID);
 
         /* Options ACF */
-        $context['options'] = get_fields('options');
+        //$context['options'] = get_fields('options');
 
         if (function_exists('pll_the_languages')) { 
             $context['langs'] = pll_the_languages(array('raw'=>1));
