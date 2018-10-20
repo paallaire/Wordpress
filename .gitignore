@@ -17,3 +17,4 @@ web/.htaccess
 
 # Composer
 /vendor
+/composer.lock
