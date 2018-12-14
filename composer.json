@@ -41,7 +41,7 @@
     "wpackagist-plugin/timber-library": "^1.7",
     "wpackagist-plugin/debug-bar-timber": "^0.3.0",
     "wpackagist-plugin/polylang": "^2.3",
-    "wpackagist-plugin/wordpress-seo": "^7.2",
+    "wpackagist-plugin/wordpress-seo": "^9.2.1",
     "wpackagist-plugin/duplicate-post": "^3.2",
     "wpackagist-plugin/cpt-custom-icon": "^1.0",
     "wpackagist-plugin/debug-bar": "^0.9.0",

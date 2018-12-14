@@ -18,3 +18,7 @@ web/.htaccess
 # Composer
 /vendor
 /composer.lock
+
+# Keep
+!web/app/mu-plugins/advanced-custom-fields-pro/
+!web/app/mu-plugins/acf-options-for-polylang/
