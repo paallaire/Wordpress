@@ -1,0 +1,148 @@
+/*
+Heading
+
+Class CSS: .hX <br />
+SASS: @include hX(); <br />
+X : 1 to 6
+
+Markup:
+<p class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
+<p class="h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
+<p class="h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
+<p class="h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
+<p class="h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
+<p class="h6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
+
+Styleguide 3.1
+*/
+
+@mixin heading-global() {}
+
+@mixin h1() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h1'), get-heading-size('h1') );
+}
+
+@mixin h2() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h2'), get-heading-size('h2') );
+}
+
+@mixin h3() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h3'), get-heading-size('h3') );
+}
+
+@mixin h4() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h4'), get-heading-size('h4') );
+}
+
+@mixin h5() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h5'), get-heading-size('h5') );
+}
+
+@mixin h6() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h6'), get-heading-size('h6') );
+}
+
+.h1 {
+    @include h1();
+}
+
+.h2 {
+    @include h2();
+}
+
+.h3 {
+    @include h3();
+}
+
+.h4 {
+    @include h4();
+}
+
+.h5 {
+    @include h5();
+}
+
+.h6 {
+    @include h6();
+}
+
+/*
+Text
+
+Class CSS: .tX <br />
+SASS: @include tX(); <br />
+X : 1 to 6
+
+
+Markup:
+<p class="t1">Aenean facilisis efficitur lorem vel sagittis. Ut egestas ultrices auctor. Nullam molestie enim ante, tincidunt congue est dignissim at. </p>
+<p class="t2">Aenean facilisis efficitur lorem vel sagittis. Ut egestas ultrices auctor. Nullam molestie enim ante, tincidunt congue est dignissim at. </p>
+<p class="t3">Aenean facilisis efficitur lorem vel sagittis. Ut egestas ultrices auctor. Nullam molestie enim ante, tincidunt congue est dignissim at. </p>
+<p class="t4">Aenean facilisis efficitur lorem vel sagittis. Ut egestas ultrices auctor. Nullam molestie enim ante, tincidunt congue est dignissim at. </p>
+<p class="t5">Aenean facilisis efficitur lorem vel sagittis. Ut egestas ultrices auctor. Nullam molestie enim ante, tincidunt congue est dignissim at. </p>
+<p class="t6">Aenean facilisis efficitur lorem vel sagittis. Ut egestas ultrices auctor. Nullam molestie enim ante, tincidunt congue est dignissim at. </p>
+
+Styleguide 3.2
+*/
+
+@mixin text-global() {}
+
+@mixin t1() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t1'), get-text-size('t1') );
+}
+
+@mixin t2() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t2'), get-text-size('t2') );
+}
+
+@mixin t3() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t3'), get-text-size('t3') );
+}
+
+@mixin t4() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t4'), get-text-size('t4') );
+}
+
+@mixin t5() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t5'), get-text-size('t5') );
+}
+
+@mixin t6() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t6'), get-text-size('t6') );
+}
+
+.t1 {
+    @include t1();
+}
+
+.t2 {
+    @include t2();
+}
+
+.t3 {
+    @include t3();
+}
+
+.t4 {
+    @include t4();
+}
+
+.t5 {
+    @include t5();
+}
+
+.t6 {
+    @include t6();
+}

@@ -1,0 +1,72 @@
+/*
+Container
+
+Markup:
+<div class="container-full">.container-full</div>
+<div class="container-mini">.container-mini</div>
+<div class="container-xsmall">.container-xsmall</div>
+<div class="container-medium">.container-medium</div>
+<div class="container-large">.container-large</div>
+<div class="container-xlarge">.container-xlarge</div>
+<div class="container-huge">.container-huge</div>
+
+Styleguide: 5.1
+*/
+
+@each $name, $value in $breakpoints {
+    @include make-lost-container-mq($name, $grid-max-columns);
+}
+
+
+@each $key,$value in $map-containers {
+
+    @if( $value == 'full') {
+
+        #{$o-container} {
+            @include container($key);
+        }        
+
+    }
+    @else {
+
+        #{$o-container}-#{$key} {
+            @include container($key);
+        }
+
+    }
+
+}
+
+/*
+Container with padding
+
+Markup:
+<div class="container-full-padding">.container-full</div>
+<div class="container-mini-padding">.container-mini</div>
+<div class="container-xsmall-padding">.container-xsmall</div>
+<div class="container-medium-padding">.container-medium</div>
+<div class="container-large-padding">.container-large</div>
+<div class="container-xlarge-padding">.container-xlarge</div>
+<div class="container-huge-padding">.container-huge</div>
+
+Styleguide: 5.2
+*/
+
+@each $key, $value in $map-containers {
+
+    @if( $value == 'full') {
+
+        #{$o-container}-padding {
+            @include container-padding($key);
+        }      
+
+    }
+    @else {
+
+        #{$o-container}-#{$key}-padding {
+            @include container-padding($key);
+        }
+
+    }
+
+}

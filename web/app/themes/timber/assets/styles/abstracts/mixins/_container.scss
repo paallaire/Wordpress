@@ -1,0 +1,14 @@
+/* ==========================================================================
+    #CONTAINER
+========================================================================== */
+
+@mixin container($type : 'desktop') {
+    @include center-block();
+    max-width: get-container($type);
+}
+
+@mixin container-padding($type : 'desktop') {
+    @include center-block();
+    @include padding-mobile();
+    max-width: get-container($type);
+}

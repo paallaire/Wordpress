@@ -1,0 +1,196 @@
+/* ==========================================================================
+    #CONFIG
+==========================================================================  */
+
+$is-dev: '.is-dev' !default;
+
+/* ==========================================================================
+    #FOLDER
+==========================================================================  */
+
+$folder-fonts: '../fonts/' !default;
+$folder-images: '../images/' !default;
+$folder-svg: '../svg/' !default;
+$icomoon-font-path: $folder-fonts !default;
+$folder-node-modules: '../../node_modules/' !default;
+
+/* ==========================================================================
+    #TYPOGRAPHY
+==========================================================================  */
+
+$body-font-size: 10px !default;
+
+/* font-family */
+/*///////////////////////////*/
+$montserrat: 'Montserrat',sans-serif !default;
+$baskerville: 'Libre Baskerville',serif !default;
+
+/* type */
+/*///////////////////////////*/
+$font-heading: $baskerville !default;
+$font-heading-line-height: 1.4 !default;
+$font-text: $montserrat !default;
+$font-text-line-height: 1.4 !default;
+
+/* style */
+/*///////////////////////////*/
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-black: 700 !default;
+
+/* heading */
+/*///////////////////////////*/
+$map-font-sizes-heading: ('h1': 60px,
+'h2': 40px,
+'h3': 32px,
+'h4': 20px,
+'h5': 26px,
+'h6': 22px) !default;
+
+$map-font-sizes-heading-mobile: ('h1': 40px,
+'h2': 32px,
+'h3': 30px,
+'h4': 28px,
+'h5': 26px,
+'h6': 20px) !default;
+
+/* text */
+/*///////////////////////////*/
+$map-font-sizes-text: ('t1': 30px,
+'t2': 24px,
+'t3': 20px,
+'t4': 18px,
+'t5': 16px,
+'t6': 12px,
+) !default;
+
+$map-font-sizes-text-mobile: ('t1': 24px,
+'t2': 20px,
+'t3': 18px,
+'t4': 16px,
+'t5': 14px,
+'t6': 12px,
+) !default;
+
+/* ==========================================================================
+    #COLORS
+==========================================================================  */
+
+$white: white !default;
+$black: black !default;
+
+/* Typo */
+/*///////////////////////////*/
+$color-text: $black !default;
+$color-heading: $black !default;
+
+/* State */
+/*///////////////////////////*/
+$color-valid: green !default;
+$color-error: red !default;
+$color-warning: yellow !default;
+
+/* Text selection */
+/*///////////////////////////*/
+$text-selection-color: $black !default;
+$text-selection-bg: #b3d4fc !default;
+
+/* ==========================================================================
+    #SELECTOR OBJECTS
+==========================================================================  */
+
+$o-container: '.container' !default;
+
+/* ==========================================================================
+    #FORM
+==========================================================================  */
+
+$form-border-width: 0 !default;
+$form-border-color: #ccc !default;
+$form-border-radius: 0 !default;
+$form-input-height: 40px !default;
+$form-input-color: #5a5657 !default;
+$form-input-bgcolor: #e6e1db !default;
+$form-input-placehoder-color: #888 !default;
+$form-input-padding-x: 12px !default;
+$form-input-padding-y: 8px !default;
+
+/* ==========================================================================
+    #MEDIA-QUERIES
+==========================================================================  */
+
+/* breakpoints (include-media) */
+/*///////////////////////////*/
+$breakpoints: (
+'xsmall': 320px,
+'small':  520px,
+'medium': 800px,
+'large':  1024px,
+'xlarge': 1440px
+) !default;
+
+$desktop-first-breakpoints: $breakpoints !default;
+
+/* ==========================================================================
+    #CONTAINER
+==========================================================================  */
+
+$map-containers: (
+'mini':   320px,
+'xsmall': 600px,
+'small':  700px,
+'medium': 900px,
+'large':  960px,
+'xlarge': 1100px,
+'huge':   1200px,
+'full':   100%
+) !default;
+
+$site-container-max-width: 1200px !default;
+
+/* ==========================================================================
+    #PADDING
+==========================================================================  */
+$padding-mobile: 30px !default;
+$padding-tablet: 40px !default;
+$padding-desktop: 60px !default;
+
+/* ==========================================================================
+    #GRID (lost)
+==========================================================================  */
+
+$grid-gutter: 20px !default;
+$lost-rounder: 100 !default;
+$lost-rounder-with-unit: #{$lost-rounder+'%'} !default;
+$grid-max-columns: 12 !default;
+$grid-gutter-desktop: 20px !default;
+$grid-gutter-tablet: 20px !default;
+$grid-gutter-phone: 20px !default;
+
+$row-margin-bottom: 15px !default;
+
+@lost gutter 20px; // most by a value ( not a variable )
+@lost flexbox flex;
+@lost cycle none;
+@lost clearing left;
+@lost rounder #{$lost-rounder};
+
+/* ==========================================================================
+    #Z-INDEX
+==========================================================================  */
+
+$z-sticky-nav: 100 !default;
+$z-mobile-nav: 100 !default;
+$z-modal: 1000 !default;
+$z-site-option: 1001 !default;
+$z-bp-debug: 1000 !default;
+
+/* ==========================================================================
+    #TRANISTION
+==========================================================================  */
+
+$transition-speed-slow: 0.6s !default;
+$transition-speed-medium: 0.3s !default;
+$transition-speed-fast: 0.1s !default;
+

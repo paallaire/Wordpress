@@ -1,0 +1,38 @@
+// intrinsic.scss ------------------------
+// An Intrinsic Ratio Component
+// ---------------------------------------
+
+.intrinsic {
+
+    padding-top: 100%; // Default to square
+    // Make sure <picture> wrapper is set to block
+    // Max-width is governed by parentNode
+    display: block;
+    width: 100%;
+    height: 0;
+    // Intrinsic Ratio Box
+    position: relative;
+    // Add as many ratios as you'd like...
+
+    &.intrinsic--square {
+        padding-top: 100%;
+    }
+
+    &.intrinsic--4x3 {
+        padding-top: 75%;
+    }
+
+    &.intrinsic--16x9 {
+        padding-top: 56.25%;
+    }
+
+    // Force the item to fill the intrinsic box
+
+    .intrinsic-item {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

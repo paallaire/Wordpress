@@ -1,43 +1,58 @@
-
 import 'es6-promise/auto';
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+import {
+    disableBodyScroll,
+    enableBodyScroll,
+    clearAllBodyScrollLocks,
+} from 'body-scroll-lock';
+
+import getEnv from './utils/getEnv';
+import getLang from './utils/getLang';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        lang: null,
-        env: "prod",
-        isModalActive: null,
-        isMenuMobileActive: false
+        lang: getLang(),
+        env: getEnv(),
+        modal: null,
+        hasMenuCanvas: false,
+        hasBodyScroll: false,
     },
     getters: {
-        lang(state) {
-            return state.lang;
-        },
-        env(state) {
-            return state.env;
-        },
-        isMenuMobileActive(state) {
-            return state.isMenuMobileActive;
-        },
-        isModalActive(state) {
-            return state.isModalActive;
-        }
+        lang: state => state.lang,
+        env: state => state.env,
+        hasMenuCanvas: state => state.hasMenuCanvas,
+        modal: state => state.modal,
+        hasBodyScroll: state => state.hasBodyScroll,
     },
     mutations: {
-        setLanguage(state, lang) {
+        setLanguage: (state, lang) => {
             state.lang = lang;
         },
-        setEnv(state, env) {
+        setEnv: (state, env) => {
             state.env = env ? 'dev' : 'prod';
         },
-        setMenuMobile(state, isMenuMobileActive) {
-            state.isMenuMobileActive = isMenuMobileActive;
+        setHasMenuCanvas: (state, hasMenuCanvas) => {
+            state.hasMenuCanvas = hasMenuCanvas;
         },
-        setModal(state, isModalActive) {
-            state.isModalActive = isModalActive;
-        }
-    }
+        setModal: (state, modal) => {
+            state.modal = modal;
+        },
+        setBodyScroll: (state, hasBodyScroll) => {
+            const $body = document.querySelector('body');
+
+            state.hasBodyScroll = hasBodyScroll;
+
+            if (!state.hasBodyScroll) {
+                disableBodyScroll($body);
+                $body.classList.add('no-scroll');
+            } else {
+                enableBodyScroll($body);
+                $body.classList.remove('no-scroll');
+            }
+        },
+    },
 });

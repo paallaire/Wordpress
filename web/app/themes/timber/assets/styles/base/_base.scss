@@ -1,0 +1,46 @@
+/* ==========================================================================
+    #ALL
+========================================================================== */
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* ==========================================================================
+    #HTML
+========================================================================== */
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* ==========================================================================
+    #BODY
+========================================================================== */
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: $black;
+    font-size: $body-font-size;
+    font-family: $font-text;
+    line-height: $font-text-line-height;
+    word-wrap: break-word;
+    word-break: normal;
+    background-color: $white;
+}
+
+/* ==========================================================================
+    #LINK
+========================================================================== */
+
+a {
+    color: $black;
+    text-decoration: none;
+}
