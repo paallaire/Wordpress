@@ -8,8 +8,8 @@ import {
     clearAllBodyScrollLocks,
 } from 'body-scroll-lock';
 
-import getEnv from './utils/getEnv';
-import getLang from './utils/getLang';
+import getEnv from './utils/helper/getEnv';
+import getLang from './utils/helper/getLang';
 
 Vue.use(Vuex);
 
@@ -35,7 +35,7 @@ export default new Vuex.Store({
         setEnv: (state, env) => {
             state.env = env ? 'dev' : 'prod';
         },
-        setHasMenuCanvas: (state, hasMenuCanvas) => {
+        setNavCanvas: (state, hasMenuCanvas) => {
             state.hasMenuCanvas = hasMenuCanvas;
         },
         setModal: (state, modal) => {

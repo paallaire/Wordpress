@@ -1,0 +1,97 @@
+/*
+Checkbox
+
+Markup: 
+<div class="form-group-input" role="group" aria-labelledby="zeppelin_head">
+    <div class="form-label" id="beatle_head">Who is the best Beatle?</div>
+    <div class="form-checkbox">
+        <input id="beatle_john" type="checkbox" name="beatle" value="beatle_john" />
+        <label for="beatle_john">John Lennon</label>
+        <input id="beatle_paul" type="checkbox" name="beatle" value="beatle_paul" />
+        <label for="beatle_paul">Paul McCartney</label>
+        <input id="beatle_george" type="checkbox" name="beatle" value="beatle_george" />
+        <label for="beatle_george">George Harrison</label>
+        <input id="beatle_ringo" type="checkbox" name="beatle" value="beatle_ringo" />
+        <label for="beatle_ringo">Ringo Starr</label>
+    </div>
+</div>
+
+Weight: 4
+
+Styleguide: layout.form.checkbox
+*/
+
+.form-checkbox {
+    position: relative;
+
+    input[type='radio'],
+    input[type='checkbox'] {
+        @extend %u-sr-only;
+    }
+
+    input[type='radio'],
+    input[type='checkbox'] {
+
+        + label {
+
+            &:after {
+                content: none;
+            }
+
+        }
+    }
+
+    input[type='radio']:checked,
+    input[type='checkbox']:checked {
+
+        + label {
+
+            &:before {
+                background: $black;
+            }
+
+            &:after {
+                content: '';
+            }
+
+        }
+    }
+   
+    label {
+        padding-left: $form-checkbox-size + $form-checkbox-space;
+        display: inline-block;
+        position: relative;
+        line-height: $form-checkbox-size;
+
+        &:not(:last-child) {
+            margin-right: $form-checkbox-space;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+        }
+
+        &:before {
+            width: $form-checkbox-size;
+            height: $form-checkbox-size;
+            top: 1px;
+            left: 0;
+            background: #f4f4f4;
+            border: 1px solid #bbb;
+        }
+
+        &:after {
+            width: 8px;
+            height: 8px;
+            top: 8px;
+            left: 7px;
+            background-color: $white;
+            border-radius: 50%;
+        }
+
+    }
+
+}

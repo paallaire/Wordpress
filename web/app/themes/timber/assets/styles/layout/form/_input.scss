@@ -1,0 +1,92 @@
+/*
+Input
+
+Markup: 
+<input type="text" id="demo-text{{modifier_class}}" name="demo-text{{modifier_class}}" class="form-input {{modifier_class}}" value="Lorem..."> <br />
+<div class="form-label" id="demo-text{{modifier_class}}">Label lorem...</div>
+<input type="email" id="demo-email{{modifier_class}}" name="demo-email{{modifier_class}}" class="form-input {{modifier_class}}" value="Lorem...">  <br />
+<div class="form-label" id="demo-email{{modifier_class}}">Label lorem...</div>
+<input type="number" id="demo-number{{modifier_class}}" name="demo-number{{modifier_class}}" class="form-input {{modifier_class}}" value="123456789">  <br />
+<div class="form-label" id="demo-number{{modifier_class}}">Label lorem...</div>
+<input type="password" id="demo-password{{modifier_class}}" name="demo-password{{modifier_class}}" class="form-input {{modifier_class}}" value="Lorem..."> <br />
+<div class="form-label" id="demo-password{{modifier_class}}">Label lorem...</div>
+<textarea id="demo-textarea{{modifier_class}}" name="demo-textarea{{modifier_class}}" class="form-textarea {{modifier_class}}">Lorem...</textarea>
+
+Weight: 2
+
+.is-invalid - Dims the button when disabled.
+.is-valid - Dims the button when disabled.
+.is-disabled - Dims the button when disabled.
+
+Styleguide: layout.form.input
+*/
+
+/*
+Placeholder
+
+Markup: 
+<input type="text" id="demo-text2" name="demo-text2" class="form-input {{modifier_class}}" placeholder="Lorem..."> <br />
+<input type="email" id="demo-email2" name="demo-email2" class="form-input {{modifier_class}}" placeholder="Lorem...">  <br />
+<input type="number" id="demo-number2" name="demo-number2" class="form-input {{modifier_class}}" placeholder="123456789">  <br />
+<input type="password" id="demo-password2" name="demo-password2" class="form-input {{modifier_class}}" placeholder="Lorem..."> <br />
+<textarea id="demo-textarea2" name="demo-textarea2" class="form-textarea {{modifier_class}}" placeholder="Lorem..."></textarea>
+
+Weight: 3
+
+Styleguide: layout.form.placeholder
+*/
+
+
+%input-base {
+    padding: 12px 17px;
+    display: block;
+    width: 100%;
+    color: $form-border-color;
+    font-weight: 500;
+    font-size: $form-border-font-size;
+    font-family: $heebo;
+    line-height: 25px;
+    background-color: $form-input-color-bg;
+    border: $form-border-width solid $cod-gray;
+    transition: all $easing 150ms;
+    appearance: none;
+}
+
+.form-textarea,
+.form-input {
+    @extend %input-base;
+
+    &.is-invalid {
+        color: $form-color-invalid;
+        border-color: $form-color-invalid;
+    }
+
+    &.is-valid {
+        color: $form-color-valid;
+        border-color: $form-color-valid;
+    }
+
+    &[disabled],
+    &.is-disabled {
+        cursor: default;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    @at-root {
+
+        input,  
+        textarea {  
+            @include input-placeholder {
+                color: $form-color-placeholder;
+            }
+        }
+
+        textarea {
+            height: 140px;
+            resize: none;
+        }
+    
+    }
+
+}

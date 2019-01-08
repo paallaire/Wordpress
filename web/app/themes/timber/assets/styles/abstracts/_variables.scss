@@ -18,67 +18,82 @@ $folder-node-modules: '../../node_modules/' !default;
     #TYPOGRAPHY
 ==========================================================================  */
 
-$body-font-size: 10px !default;
-
 /* font-family */
-/*///////////////////////////*/
-$montserrat: 'Montserrat',sans-serif !default;
-$baskerville: 'Libre Baskerville',serif !default;
+$robot: 'Roboto Slab', serif !default;
+$heebo: 'Heebo', sans-serif !default;
+
+/* base */
+$base-font-size: 10px !default;
+$base-heading-line-height: 1.4 !default;
+$base-text-line-height: 1.8 !default;
+
+$rhythm-vertical: 10px; /* beta */
 
 /* type */
-/*///////////////////////////*/
-$font-heading: $baskerville !default;
-$font-heading-line-height: 1.4 !default;
-$font-text: $montserrat !default;
-$font-text-line-height: 1.4 !default;
-
-/* style */
-/*///////////////////////////*/
-$font-weight-light: 300 !default;
-$font-weight-regular: 400 !default;
-$font-weight-bold: 700 !default;
-$font-weight-black: 700 !default;
+$font-heading: $robot !default;
+$font-text: $heebo !default;
 
 /* heading */
-/*///////////////////////////*/
-$map-font-sizes-heading: ('h1': 60px,
-'h2': 40px,
-'h3': 32px,
-'h4': 20px,
-'h5': 26px,
-'h6': 22px) !default;
+$map-font-sizes-heading: (
+'h1': 90px,
+'h2': 78px,
+'h3': 40px,
+'h4': 32px,
+'h5': 28px,
+'h6': 26px
+) !default;
 
-$map-font-sizes-heading-mobile: ('h1': 40px,
-'h2': 32px,
-'h3': 30px,
-'h4': 28px,
-'h5': 26px,
-'h6': 20px) !default;
+$map-font-sizes-heading-mobile: (
+'h1': 90px,
+'h2': 78px,
+'h3': 40px,
+'h4': 32px,
+'h5': 28px,
+'h6': 26px
+) !default;
 
 /* text */
-/*///////////////////////////*/
-$map-font-sizes-text: ('t1': 30px,
-'t2': 24px,
-'t3': 20px,
-'t4': 18px,
-'t5': 16px,
-'t6': 12px,
+$map-font-sizes-text: (
+'t1': 28px,
+'t2': 26px,
+'t3': 24px,
+'t4': 22px,
+'t5': 20px,
+'t6': 16px
 ) !default;
 
-$map-font-sizes-text-mobile: ('t1': 24px,
-'t2': 20px,
-'t3': 18px,
-'t4': 16px,
-'t5': 14px,
-'t6': 12px,
+$map-font-sizes-text-mobile: (
+'t1': 28px,
+'t2': 26px,
+'t3': 24px,
+'t4': 22px,
+'t5': 20px,
+'t6': 16px
 ) !default;
-
+    
 /* ==========================================================================
     #COLORS
 ==========================================================================  */
 
-$white: white !default;
+// Colors
+//
+// The primary colors for branding.
+//
+// $black - #000;
+// $white - #fff;
+// $cod-gray - #111;
+// $lightning-yellow - #f8c119;
+// $tundora - #474747;
+// $pampas - #f8f7f5;
+//
+// Styleguide abstracts.colors
+
 $black: black !default;
+$white: white;
+$cod-gray: #111;
+$lightning-yellow: #f8c119;
+$tundora: #474747;
+$pampas: #f8f7f5;
 
 /* Typo */
 /*///////////////////////////*/
@@ -106,15 +121,24 @@ $o-container: '.container' !default;
     #FORM
 ==========================================================================  */
 
-$form-border-width: 0 !default;
-$form-border-color: #ccc !default;
+$form-border-color: $cod-gray !default;
+$form-border-font-size: 16px !default;
 $form-border-radius: 0 !default;
+$form-border-width: 2px !default;
+
+$form-checkbox-size: 22px;
+$form-checkbox-space: 10px;
+
+$form-color-invalid: #e00000;
+$form-color-valid: #218003;
+$form-color-placeholder: #888 !default;
+$form-input-color-bg: $white !default;
+
 $form-input-height: 40px !default;
-$form-input-color: #5a5657 !default;
-$form-input-bgcolor: #e6e1db !default;
-$form-input-placehoder-color: #888 !default;
 $form-input-padding-x: 12px !default;
 $form-input-padding-y: 8px !default;
+
+$toggle-color-bg: #ccc;
 
 /* ==========================================================================
     #MEDIA-QUERIES
@@ -127,7 +151,8 @@ $breakpoints: (
 'small':  520px,
 'medium': 800px,
 'large':  1024px,
-'xlarge': 1440px
+'xlarge': 1200px,
+'huge': 1400px
 ) !default;
 
 $desktop-first-breakpoints: $breakpoints !default;
@@ -143,11 +168,11 @@ $map-containers: (
 'medium': 900px,
 'large':  960px,
 'xlarge': 1100px,
-'huge':   1200px,
+'site':   1250px,
 'full':   100%
 ) !default;
 
-$site-container-max-width: 1200px !default;
+$site-container-max-width: 1250px !default;
 
 /* ==========================================================================
     #PADDING
@@ -160,17 +185,14 @@ $padding-desktop: 60px !default;
     #GRID (lost)
 ==========================================================================  */
 
-$grid-gutter: 20px !default;
-$lost-rounder: 100 !default;
+$grid-gutter: 30px !default;
+$lost-rounder: 99.9 !default;
 $lost-rounder-with-unit: #{$lost-rounder+'%'} !default;
 $grid-max-columns: 12 !default;
-$grid-gutter-desktop: 20px !default;
-$grid-gutter-tablet: 20px !default;
-$grid-gutter-phone: 20px !default;
 
 $row-margin-bottom: 15px !default;
 
-@lost gutter 20px; // most by a value ( not a variable )
+@lost gutter 30px; // most by a value ( not a variable )
 @lost flexbox flex;
 @lost cycle none;
 @lost clearing left;
@@ -194,3 +216,18 @@ $transition-speed-slow: 0.6s !default;
 $transition-speed-medium: 0.3s !default;
 $transition-speed-fast: 0.1s !default;
 
+$easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+/* ==========================================================================
+    #VARIABLES MODAL
+========================================================================== */
+
+$modal-selector: '.c-modal';
+$modal-zindex: 1000 !default;
+$modal-max-width: 1100px !default;
+$modal-max-height: calc(100vh - 20px) !default;
+$modal-overlay-bg-color: #000 !default;
+$modal-overlay-opacity: 0.8 !default;
+$modal-content-bg-color: transparent !default;
+$modal-content-padding: 30px 0 0 0 !default;
+$modal-transition: opacity 0.375s cubic-bezier(0.4, 0, 0.2, 1);

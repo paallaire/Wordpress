@@ -1,0 +1,22 @@
+
+{% set icons = [
+    'icon-arrow-down',
+    'icon-arrow-right',
+    'icon-play',
+    'icon-plus',
+    'icon-twitter',
+    'icon-facebook',
+    'icon-instagram',
+    'icon-custom-arrow',
+    'icon-location',
+    'icon-dropdown-arrow',
+    'icon-heart',
+] %}
+
+<ul class="kss-list-icons">
+{% for icon in icons %}
+<li>
+<svg class="icon {{ icon }}"><use xlink:href="/site-assets/svg/symbol-defs.svg#{{ icon }}"></use></svg><span class="name"> {{ icon }}</span>
+</li>
+{% endfor %}
+</ul>

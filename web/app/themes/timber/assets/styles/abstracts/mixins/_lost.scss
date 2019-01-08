@@ -54,6 +54,14 @@
             }
     
         }
+
+        .row-#{$name} {
+
+            @include media('>=#{$name}') {
+                lost-flex-container: row;
+            }
+    
+        }
         
     }
 
@@ -85,4 +93,3 @@
     }
 
 }
-

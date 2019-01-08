@@ -1,0 +1,109 @@
+/*
+Typograhy
+
+Style for heading, text etc...
+
+Styleguide: base.typograhy
+*/
+
+
+/*
+Heading
+
+All HTML headings, h1 through h6, are available. <br /><br />
+
+CSS class: .h1 ... .h6 <br />
+SASS: @include h1() ... ()h6; <br />
+
+Markup: ../../kss-styleguide/styleguide/markup/typo-heading.html
+
+Styleguide base.typograhy.heading
+*/
+
+@mixin heading-global() {
+    line-height: 1.5;
+}
+
+@mixin h1() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h1'), get-heading-size('h1') );
+    font-weight: 700;
+    font-family: $robot;
+}
+
+@mixin h2() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h2'), get-heading-size('h2') );
+    font-weight: 700;
+    font-family: $heebo;
+}
+
+@mixin h3() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h3'), get-heading-size('h3') );
+    font-weight: 700;
+    font-family: $heebo;
+}
+
+@mixin h4() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h4'), get-heading-size('h4') );
+    font-weight: 700;
+    font-family: $heebo;
+}
+
+@mixin h5() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h4'), get-heading-size('h4') );
+    font-weight: 700;
+    font-family: $heebo;
+}
+
+@mixin h6() {
+    @include heading-global();
+    @include responsive( 'font-size', get-heading-size-mobile('h4'), get-heading-size('h4') );
+    font-weight: 700;
+    font-family: $heebo;
+}
+
+.h1 {
+    @include h1();
+}
+
+.h2 {
+    @include h2();
+}
+
+.h3 {
+    @include h3();
+}
+
+.h4 {
+    @include h4();
+}
+
+.h5 {
+    @include h6();
+}
+
+.h6 {
+    @include h6();
+}
+
+/*
+surtitle
+
+Markup:
+<p class="surtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+Styleguide base.typograhy.surtitle
+*/
+
+.surtitle {
+    color: $lightning-yellow;
+    font-size: 11px;
+    font-family: $font-heading;
+    font-family: 'Roboto Slab';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

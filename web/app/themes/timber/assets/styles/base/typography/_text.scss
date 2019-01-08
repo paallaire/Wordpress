@@ -1,0 +1,142 @@
+/*
+Text
+
+All HTML texts, t1 through t6, are available. <br /><br />
+
+CSS class: .t1 ... .t6 <br />
+SASS: @include t1() ... ()t6; <br />
+
+Markup: ../../kss-styleguide/styleguide/markup/typo-text.html
+
+Styleguide base.typograhy.text
+*/
+
+@mixin text-global() {
+    font-weight: 400;
+    font-family: $heebo;
+    line-height: 1.5;
+}
+
+@mixin t1() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t1'), get-text-size('t1') );
+}
+
+@mixin t2() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t2'), get-text-size('t2') );
+}
+
+@mixin t3() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t3'), get-text-size('t3') );
+}
+
+@mixin t4() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t4'), get-text-size('t4') );
+}
+
+@mixin t5() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t5'), get-text-size('t5') );
+}
+
+@mixin t6() {
+    @include text-global();
+    @include responsive( 'font-size', get-text-size-mobile('t6'), get-text-size('t6') );
+}
+
+
+.t1 {
+    @include t1();
+}
+
+.t2 {
+    @include t2();
+}
+
+.t3 {
+    @include t3();
+}
+
+.t4 {
+    @include t4();
+}
+
+.t5 {
+    @include t5();
+}
+
+.t6 {
+    @include t6();
+}
+
+/*
+wysiwyg
+
+Markup: ../../kss-styleguide/styleguide/markup/wysiwyg.html
+
+Styleguide base.typograhy.wysiwyg
+*/
+
+@mixin wysiwyg() {
+    line-height: $base-text-line-height;
+
+    > * + * {
+        margin-top: vr(1);
+        margin-bottom: vr(1);
+    }
+
+    h1, h2, h3, h4, h5, h6 {}
+
+    h1 {
+        @include h1();
+    }
+
+    h2 {
+        @include h2();
+    }
+
+    h3 {
+        @include h3();
+    }
+    
+    h4 {
+        @include h4();
+    }
+
+    h5 {
+        @include h5();
+    }
+
+    h6 {
+        @include h6();
+    }
+
+    strong {
+        color: $lightning-yellow;
+    }
+
+    del {
+        color: $lightning-yellow;   
+    }
+
+    p {
+        color: $tundora;
+
+        &:not(:last-child) {
+            margin-bottom: vr(1);
+        }
+
+    }
+}
+
+.wysiwyg {
+    @include wysiwyg();
+}
+
+.wysiwyg--txt-center {
+    @include wysiwyg();
+    text-align: center;
+}

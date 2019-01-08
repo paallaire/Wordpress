@@ -1,0 +1,30 @@
+
+/*
+Status
+
+Markup: ../../kss-styleguide/styleguide/markup/form-input-status.html
+
+Weight: 8
+
+Styleguide: layout.form.status
+*/
+
+.form-input-status {
+    padding: 4px;
+    background: #ddd;
+
+    &.is-invalid {
+        color: $form-color-invalid;
+    }
+
+    &.is-valid {
+        color: $form-color-valid;
+    }
+
+}
+
+.form-select + .form-input-status,
+.form-select + .form-input-status,
+.form-input + .form-input-status {
+    margin-top: vr(0.5);
+}

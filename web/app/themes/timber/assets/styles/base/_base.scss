@@ -27,13 +27,13 @@ html {
 body {
     overflow-x: hidden;
     overflow-y: scroll;
-    color: $black;
-    font-size: $body-font-size;
+    color: $cod-gray;
+    font-size: $base-font-size;
     font-family: $font-text;
-    line-height: $font-text-line-height;
+    line-height: $base-text-line-height;
     word-wrap: break-word;
     word-break: normal;
-    background-color: $white;
+    background-color: $pampas;
 }
 
 /* ==========================================================================
@@ -41,6 +41,6 @@ body {
 ========================================================================== */
 
 a {
-    color: $black;
+    color: $cod-gray;
     text-decoration: none;
 }

@@ -30,14 +30,14 @@ $kss-modifiers-name-color: $cowabunga;
 .kss-section { margin-bottom: 40px; }
 
 .kss-section__content {
-  border: 1px solid $gray;
+  border: 1px solid $border-color;
   padding: 1em;
 
   ol,
   ul,
   p,
   a {
-    font-family: 'Lato', sans-serif;
+    font-family: $font;
     font-weight: 400;
     line-height: 1.5;
   }
@@ -50,7 +50,7 @@ $kss-modifiers-name-color: $cowabunga;
   margin-bottom: 5px;
   color: $kss-section-item-color;
   font-size: rem(32px);
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-weight: 400;
   text-transform: none;
   letter-spacing: normal;
@@ -123,7 +123,7 @@ $kss-modifiers-name-color: $cowabunga;
   p,
   a {
     color: $black;
-    font-family: 'Lato', sans-serif;
+    font-family: $font;
     font-weight: 400;
     line-height: 1.5;
   }
@@ -171,7 +171,7 @@ $kss-modifiers-name-color: $cowabunga;
 }
 
 .kss-section__modifiers {
-  border: 1px solid $gray;
+  border: 1px solid $border-color;
   border-top: none;
   border-bottom: none;
   padding: 1em;
@@ -181,7 +181,7 @@ $kss-modifiers-name-color: $cowabunga;
 .kss-modifiers__heading {
   margin: 0;
   margin-bottom: 10px;
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-size: rem(18px);
   font-weight: 700;
   color: $kss-modifiers-heading-color;
@@ -195,7 +195,7 @@ $kss-modifiers-name-color: $cowabunga;
   color: $kss-modifiers-name-color;
 }
 
-.kss-modifiers__description { margin: 0; }
+.kss-modifiers__description { margin: 0 0 2em 0; }
 
 .kss-modifiers__example {
   position: relative;
@@ -209,6 +209,11 @@ $kss-modifiers-name-color: $cowabunga;
   }
 
   &:last-child { margin-bottom: 0; }
+
 }
 
 .kss-section__markup pre[class*=language-] { margin: 0; }
+
+.kss-modifiers__modifier {
+  margin-top: 5px;
+}

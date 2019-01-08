@@ -1,0 +1,56 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-heart {
+  width: 1.125em;
+}
+
+.icon-arrow-down {
+  width: 0.7001953125em;
+}
+
+.icon-custom-arrow {
+  width: 1.0185546875em;
+}
+
+.icon-custom-arrow-right {
+  width: 1.0185546875em;
+}
+
+.icon-location {
+  width: 0.75390625em;
+}
+
+.icon-plus {
+  width: 1.0625em;
+}
+
+.icon-dropdown-arrow {
+  width: 1.6669921875em;
+}
+
+.icon-play {
+  width: 0.8486328125em;
+}
+
+.icon-facebook {
+  width: 0.5881428571428571em;
+}
+
+.icon-instagram {
+  width: 0.8571428571428571em;
+}

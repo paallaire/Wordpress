@@ -1,0 +1,16 @@
+/*
+Note
+
+Markup: ../../kss-styleguide/styleguide/markup/form-input-note.html
+
+Weight: 7
+
+Styleguide: layout.form.input-note
+*/
+
+.form-input-note {}
+
+.form-select + .form-input-note,
+.form-input + .form-input-note {
+    margin-top: vr(0.5);
+}

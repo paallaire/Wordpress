@@ -11,9 +11,15 @@
     padding-left: $padding-tablet;
 }
 
-@mixin padding-mobile() {
+@mixin padding-mobile($direciton: 'v') {
     padding-right: $padding-mobile;
     padding-left: $padding-mobile;
+
+    @if( $direciton == 'both') {
+        padding-top: $padding-mobile;
+        padding-bottom: $padding-mobile;
+    }
+
 }
 
 @mixin padding-container() {

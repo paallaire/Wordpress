@@ -4,21 +4,46 @@
 ========================================================================== */
 
 /* transition-fade-in*/
-@mixin transition-fade-in( $opacity : 0.8, $speed : $transition-speed-medium, $easing : linear ) {
-    opacity: 0;
+@mixin transition-fade-to( $opacityStart : 0.8, $opacityEnd : 0.8, $speed : $transition-speed-medium, $easing : $easing ) {
+    opacity: $opacityStart;
     transition: opacity $speed $easing;
 
     &:hover {
-        opacity: $opacity;
+        opacity: $opacityEnd;
     }
 }
 
-/* transition-fade-out*/
-@mixin transition-fade-out( $opacity : 0.8, $speed : $transition-speed-medium, $easing : linear ) {
-    opacity: $opacity;
-    transition: opacity $speed $easing;
+@mixin transition-scale-underline() {
+    position: relative;
 
     &:hover {
-        opacity: 0;
+
+        &:after {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+
     }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        left: 0;
+        border-bottom: 2px solid currentColor;
+        transform: scaleX(0);
+        opacity: 0;
+        transition: transform 300ms $easing,opacity 300ms $easing;
+    }
+    
+}
+
+@mixin transition-focus-color( $color: $lightning-yellow) {
+    transition: color 300ms $easing;
+
+    &:hover {
+        color: $lightning-yellow; 
+    }
+
 }

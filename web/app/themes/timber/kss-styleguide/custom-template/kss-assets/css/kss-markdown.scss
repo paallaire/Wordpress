@@ -23,7 +23,7 @@ $kss-markdown-headings-color: $cowabunga;
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
     color: $black;
-    font-family: 'Lato', sans-serif;
+    font-family: $font;
     font-weight: 400;
     line-height: 1.5;
   }
@@ -103,14 +103,14 @@ $kss-markdown-headings-color: $cowabunga;
     margin-top: rem(23px);
     margin-bottom: rem(24px);
     border: 0;
-    border-top: 1px solid $gray;
+    border-top: 1px solid $border-color;
     padding: 0;
   }
 
   pre,
   pre[class*=language-] {
     overflow: auto;
-    border: 1px solid $gray;
+    border: 1px solid $border-color;
     padding: 1em;
     background: #F5F5F5;
   }

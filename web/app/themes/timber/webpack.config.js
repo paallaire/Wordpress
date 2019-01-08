@@ -11,23 +11,32 @@ module.exports = {
     devtool: !isProd ? 'inline-source-map' : false,
     module: {
         rules: [{
-            test: /\.vue$/,
-            loader: 'vue-loader',
-            options: {
-                productionMode: isProd,
-            },
-        },
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader',
+                test: /\.vue$/,
+                loader: 'vue-loader',
                 options: {
-                    presets: ['@babel/preset-env'],
-                    cacheDirectory: true,
+                    productionMode: isProd,
                 },
             },
-        },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            [
+                                '@babel/preset-env',
+                                {
+                                    'useBuiltIns': 'usage',
+                                    'debug': true,
+
+                                }
+                            ]
+                        ],
+                        cacheDirectory: true,
+                    },
+                },
+            },
         ],
     },
     resolve: {

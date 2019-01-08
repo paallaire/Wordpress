@@ -1,8 +1,12 @@
-/* for style guide */
-@import 'styleguide';
+/*
+Abstracts
 
-/* 1. Configuration and helpers*/
-/*/////////////////////////////////////////*/
+The abstracts/ folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here.
+
+Weight: 1
+
+Styleguide abstracts
+*/
 @import 'abstracts/functions';
 @import 'abstracts/variables';
 @import 'abstracts/variables-hamburger';
@@ -10,65 +14,142 @@
 
 /* - mixins*/
 /*/////////////////////////////////////////*/
-@import 'abstracts/mixins/container';
-@import 'abstracts/mixins/lost';
 @import 'abstracts/mixins/center';
 @import 'abstracts/mixins/clearfix';
-@import 'abstracts/mixins/last-row';
-@import 'abstracts/mixins/input-placeholder';
-@import 'abstracts/mixins/padding';
-@import 'abstracts/mixins/text-truncate';
-@import 'abstracts/mixins/ios';
-@import 'abstracts/mixins/responsive';
+@import 'abstracts/mixins/container';
 @import 'abstracts/mixins/focuspoint';
+@import 'abstracts/mixins/input-placeholder';
 @import 'abstracts/mixins/intrinsic';
+@import 'abstracts/mixins/ios';
+@import 'abstracts/mixins/last-row';
 @import 'abstracts/mixins/letter-spacing';
+@import 'abstracts/mixins/lost';
+@import 'abstracts/mixins/padding';
+@import 'abstracts/mixins/responsive';
+@import 'abstracts/mixins/text-truncate';
 
-/* 2. Vendors*/
+/* - utils*/
+@import 'abstracts/utils/grid-helper';
+@import 'abstracts/utils/bp-helper';
+
+/* Vendors*/
 /*/////////////////////////////////////////*/
+
+/* - external*/
 @import '../../node_modules/normalize-scss/sass/_normalize';
 @import '../../node_modules/include-media/dist/_include-media';
 @import '../../node_modules/aos/src/sass/aos';
 @import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
-//@import '../../node_modules/@paallaire/debug-breakpoint-scss/assets/styles/main'; ( bug avec @import '~include-media/dist/_include-media'; )
+@import '../../node_modules/swiper/dist/css/swiper';
+@import '../../node_modules/include-media-export/dist/_include-media-export';
 
-/* - utils*/
-/*/////////////////////////////////////////*/
-@import 'abstracts/utils/show-grid';
-@import 'abstracts/utils/breakpoint-helper';
+/* - local*/
+@import 'vendors/lazyload';
+@import 'vendors/vuejs';
+@import 'vendors/hyperform';
 
-/* 3. Base stuff*/
-/*/////////////////////////////////////////*/
+/*
+Base
+
+The base/ folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet defining some standard styles for commonly used HTML elements.
+
+Weight: 2
+
+Styleguide base
+*/
+
 @import 'base/reset';
 @import 'base/base';
 @import 'base/fonts';
-@import 'base/typography';
+@import 'base/typography/heading';
+@import 'base/typography/text';
 @import 'base/icons';
 @import 'base/animations';
 @import 'base/transitions';
-@import 'base/container';
-@import 'base/grid';
 
-/* 4. Layout-related sections */
-/*/////////////////////////////////////////*/
-@import 'layout/header';
+/*
+Elements
+
+Explicitly named designed pieces of UI. The cosmetic layer, includes more specific styling instructions.
+
+Weight: 6
+
+Styleguide: elements
+*/
+@import 'elements/btn';
+@import 'elements/list';
+@import 'elements/circle';
+
+/*
+Components
+
+For smaller components, there is the components/ folder. While layout/ is macro (defining the global wireframe), components/ is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines.
+
+Weight: 7
+
+Styleguide: components
+*/
+@import 'components/modal';
+@import 'components/progress-bar';
+@import 'components/slider-images';
+
+/*
+Layout
+
+The layout/ folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar…), the grid system or even CSS styles for all the forms.
+
+Weight: 8
+
+Styleguide: layout
+*/
+@import 'layout/grid/container';
+@import 'layout/grid/grid';
+
+/*
+Form
+
+Styleguide layout.form
+*/
+
+@import 'layout/form/base';
+@import 'layout/form/label';
+@import 'layout/form/input';
+@import 'layout/form/checkbox';
+@import 'layout/form/radio';
+@import 'layout/form/select';
+@import 'layout/form/input-note';
+@import 'layout/form/input-status';
+@import 'layout/form/control';
+@import 'layout/form/toggle';
+
 @import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/nav-canvas';
+@import 'layout/wrapper';
 
-/* 5. Components
-/*/////////////////////////////////////////*/
-@import 'components/btn';
+/*
+Pages
 
-/* 6. Page-specific styles */
-/*/////////////////////////////////////////*/
+If you have page-specific styles, it is better to put them in a pages/ folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a _home.scss file in pages/.
+
+Weight: 9
+
+Styleguide: pages
+*/
 @import 'pages/home';
 @import 'pages/404';
 
-#app {
-    max-width: $site-container-max-width;
-    margin: 0 auto;
-}
+/*
+Utility 
 
-#test {
-    lost-center: 4/12;
-    background: red;
-}
+Utility classes are helper classes that perform one thing extremely well. They do it so well, they override everything else. As such, they often only contain one property, and they include the !important declaration.
+
+Weight: 10
+
+Styleguide utility
+*/
+@import 'utility/text';
+
+@include bp-helper();
+@include grid-helper();

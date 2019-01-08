@@ -291,10 +291,12 @@
             "rem",
             "%",
             "s",
+            "ms",
             "px",
             "vw",
             "vh",
             "deg"
+
         ],
         "property-no-unknown": [
             true,

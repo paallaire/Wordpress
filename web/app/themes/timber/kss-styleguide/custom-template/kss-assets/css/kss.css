@@ -8,7 +8,7 @@
   color: #E87E04;
   text-align: center;
   font-size: 1.5rem;
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-weight: 700;
   text-transform: none;
   letter-spacing: normal; }
@@ -25,7 +25,7 @@
   padding: 10px;
   color: #E87E04;
   background: #FFFFFF;
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-weight: 400; }
   @media only screen and (min-width: 64.125em) {
     .kss-header {
@@ -99,7 +99,7 @@
   height: 100%;
   color: #222222;
   background: #FFFFFF;
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-weight: 400;
   transform: translateX(-100%);
   transition: transform 0.3s ease-out; }
@@ -147,7 +147,7 @@
   box-sizing: border-box;
   padding: 5px 20px;
   color: #222222;
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
@@ -208,7 +208,7 @@
   .kss-markdown h1, .kss-markdown h2, .kss-markdown h3, .kss-markdown h4, .kss-markdown h5, .kss-markdown h6 {
     margin: 0;
     color: #222222;
-    font-family: 'Lato', sans-serif;
+    font-family: $font;
     font-weight: 400;
     line-height: 1.5; }
   .kss-markdown a {
@@ -323,7 +323,7 @@
   .kss-section__content ul,
   .kss-section__content p,
   .kss-section__content a {
-    font-family: 'Lato', sans-serif;
+    font-family: $font;
     font-weight: 400;
     line-height: 1.5; }
 
@@ -335,7 +335,7 @@
   margin-bottom: 5px;
   color: #E87E04;
   font-size: 2rem;
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-weight: 400;
   text-transform: none;
   letter-spacing: normal; }
@@ -395,7 +395,7 @@
   .kss-section__description p,
   .kss-section__description a {
     color: #222222;
-    font-family: 'Lato', sans-serif;
+    font-family: $font;
     font-weight: 400;
     line-height: 1.5; }
   .kss-section__description ol,
@@ -439,7 +439,7 @@
 .kss-modifiers__heading {
   margin: 0;
   margin-bottom: 10px;
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-size: 1.125rem;
   font-weight: 700;
   color: #E87E04; }

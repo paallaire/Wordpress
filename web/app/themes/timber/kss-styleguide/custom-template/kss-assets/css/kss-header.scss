@@ -17,7 +17,7 @@ $bar-width: 30px;
   padding: 10px;
   color: $kss-header-color;
   background: $white;
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   font-weight: 400;
 
   @include mq(min, 1025px) { display: none; }

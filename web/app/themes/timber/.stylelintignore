@@ -2,3 +2,5 @@
 *.php
 *.html
 /kss-styleguide
+/dist
+/public

@@ -1,0 +1,40 @@
+
+
+/*
+Text align
+
+Markup:
+<p class="u-text-left">Lorem ipsum dolor sit amet, qui mollis verterem eu. Mei utroque appetere ea, essent noluisse his an.</p>
+<p class="u-text-center">Lorem ipsum dolor sit amet, qui mollis verterem eu. Mei utroque appetere ea, essent noluisse his an.</p>
+<p class="u-text-right">Lorem ipsum dolor sit amet, qui mollis verterem eu. Mei utroque appetere ea, essent noluisse his an.</p>
+
+Styleguide utility.text-align
+*/
+
+.u-text-left { text-align: left !important; }
+.u-text-center { text-align: center !important; }
+.u-text-right { text-align: right !important; }
+
+/*
+Screen reader only
+
+Markup:
+<p>Lorem ipsum dolor sit amet, <span class="u-sr-only">hello world</span> qui mollis verterem eu. Mei utroque appetere ea, essent noluisse his an.</p>
+
+Styleguide utility.screen-reader-only
+*/
+
+%u-sr-only {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+}
+
+.u-sr-only {
+    @extend %u-sr-only;
+}
