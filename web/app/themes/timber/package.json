@@ -67,7 +67,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "axios": "0.18.0",
+    "axios": "0.21.1",
     "babel-polyfill": "^6.26.0",
     "body-scroll-lock": "^2.5.10",
     "bowser": "1.9.4",
