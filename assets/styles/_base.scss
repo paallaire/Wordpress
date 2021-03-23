@@ -1,0 +1,24 @@
+/* html
+-------------------------------------------- */
+html {
+    @apply antialiased bg-beige-1 text-black overflow-x-hidden font-brand;
+    scroll-behavior: smooth;
+
+    &.no-scroll {
+        @apply overflow-hidden;
+    }
+
+}
+
+/* body
+-------------------------------------------- */
+body {
+    @apply m-0 p-0 leading-none overflow-x-hidden;
+    letter-spacing: 0.1em;
+    padding-top: 64px;
+
+    @screen lg {
+        @apply pt-0;
+    }
+
+}

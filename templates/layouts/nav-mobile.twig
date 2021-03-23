@@ -1,0 +1,53 @@
+<div id="nav-mobile" class="p-4 flex flex-col fixed top-0 left-0 w-full h-screen bg-white z-50">
+
+    <div class="flex">
+
+        <div class="w-25">
+            <a href="{{ home_url }}" class="transition duration-150 ease-in | hover:opacity-50">
+                <svg id="site-logo" class="icon icon-logo-hera text-12 | lg:text-20">
+                    <use xlink:href=" {{ sprite }}#icon-logo-hera"></use>
+                </svg>
+            </a>
+        </div>
+
+        <div class="ml-auto ">
+
+            <button class="hamburger hamburger--slider | is-active" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <nav class="flex-1 flex justify-center items-center">
+        <ul class="space-y-5">
+            {% for item in primary_navigation.items %}
+            <li>
+                <a class="text-lg uppercase text-center block" href="{{ item.link }}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+            {% for item in languages %}
+            <li>
+                <a class="text-base uppercase block text-center {{ item.active == 1 ? 'font-bold' : ''}}" href="{{ item.url }}">{{ item.language_code }}</a>
+            </li>
+            {% endfor %}
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+
+    <div class="flex absolute bottom-4 right-4">
+        <a href="{{ options.facebook }}" target="_blank" class="transition duration-150 ease-in mr-4 | hover:opacity-50">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="{{ options.Instagram  }}" target="_blank" class="transition duration-150 ease-in | hover:opacity-50">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+</div>
+
+

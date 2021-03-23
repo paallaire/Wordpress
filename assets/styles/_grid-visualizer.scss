@@ -1,0 +1,42 @@
+$dev-grid-visualizer: '.dev-grid-visualizer';
+  
+#{$dev-grid-visualizer} {
+    @apply hidden w-full h-full fixed top-0 left-0;
+    z-index: 1000;
+
+    &.is-active {
+        @apply block;
+    }
+
+    &__row,
+    &__container {
+        @apply h-full;
+    }
+
+    &__container {
+        @apply mx-auto;
+    }
+
+    &__column {
+        @apply h-full;
+    }
+
+    &__block {
+        @apply h-full;
+        background-color: cadetblue;
+        opacity: 0.5;
+    }
+
+    &-toggle {
+        @apply bg-black text-white bottom-0 left-0 fixed leading-none;
+        padding: .3333333em .5em;
+        font-size: 0.75rem;
+        font-family: sans-serif;
+        z-index: 2000;
+
+        &:hover {
+            background: #aaa;
+        }
+    }
+}
+

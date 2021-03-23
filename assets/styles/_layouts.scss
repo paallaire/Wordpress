@@ -1,0 +1,50 @@
+/* nav-lang-li
+-------------------------------------------- */
+.nav-lang-li {
+
+    &:not(:last-child) {
+
+        &:after {
+            @apply inline-block px-1;
+            content: '—'
+        }
+
+    }
+
+}
+
+/* nav-mobile
+-------------------------------------------- */
+#nav-mobile {
+    @apply opacity-0 transform translate-x-full transition-opacity duration-200 ease-out;
+
+    &.is-active {
+        @apply opacity-100 translate-x-0;
+    }
+
+}
+
+/* modal-age
+-------------------------------------------- */
+#modal-age {
+    @apply hidden ease-out duration-500 opacity-0;
+
+    &.is-active {
+        @apply opacity-100;
+    }
+}
+
+/* site-nav
+-------------------------------------------- */
+#site-nav {
+    @apply py-4 fixed top-0 left-0 w-full z-50 transition ease-out duration-500 bg-white;
+
+    &.is-top {
+        @apply bg-transparent;
+    }
+
+    &.is-hide {
+        @apply transform -translate-y-full;
+    }
+
+}

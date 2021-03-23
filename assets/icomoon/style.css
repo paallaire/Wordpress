@@ -1,0 +1,40 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-arrow-right {
+  width: 2.3095703125em;
+}
+
+.icon-arrow-left {
+  width: 2.3095703125em;
+}
+
+.icon-facebook {
+  width: 0.46484375em;
+}
+
+.icon-logo-hera {
+  width: 3.0537109375em;
+}
+
+.icon-logo-p {
+  width: 0.5322265625em;
+}
+
+.icon-logo-quebec {
+  width: 0.7939453125em;
+}

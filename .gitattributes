@@ -1,0 +1,8 @@
+* text=auto eol=lf
+* text=auto eol=lf
+*.js text eol=lf
+*.sass text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.twig text eol=lf
+*.php text eol=lf

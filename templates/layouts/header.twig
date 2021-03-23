@@ -1,0 +1,47 @@
+<header id="site-nav">
+	<div class="container-site-large">
+
+		<div class="flex">
+
+			<div class="w-25">
+				<a href="{{ home_url }}" class="transition duration-150 ease-in | hover:opacity-50">
+					<svg id="site-logo" class="icon icon-logo-hera text-12 | lg:text-20">
+						<use xlink:href=" {{ sprite }}#icon-logo-hera"></use>
+					</svg>
+				</a>
+			</div>
+
+			<nav class="hidden | md:px-8 md:flex flex-1 justify-center">
+				<ul class="flex justify-between items-start w-full max-w-100">
+					{% for item in primary_navigation.items %}
+					<li class="{{ item.classes|join(' ') }}">
+						<a class="o-link | text-base uppercase leading-none" href="{{ item.link }}">{{ item.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</nav>
+
+			<div class="ml-auto | lg:mr-4">
+				<ul class="hidden | md:mt-2px md:flex">
+					{% for item in languages %}
+					<li class="nav-lang-li | flex items-center">
+						<a class="o-link | text-base uppercase leading-none {{ item.active == 1 ? 'font-bold' : ''}}" href="{{ item.url }}">{{
+							item.language_code }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+
+				<button class="hamburger hamburger--slider | mt-1px | md:hidden" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+
+			</div>
+
+		</div>
+
+	</div>
+</header>
+
+{% include './templates/layouts/nav-mobile.twig' with {} %}

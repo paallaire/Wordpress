@@ -1,0 +1,69 @@
+<footer id="contact" class="bg-brown-1 text-white py-10 | md:mt-26 md:pt-20 md:pb-8">
+	<div class="container-site | relative">
+
+		<div class="flex flex-col | md:flex-row">
+
+			<div class="order-2 text-center mt-8 | md:order-1 md:text-left md:mt-0 md:w-50">
+				<div class="text-md uppercase">{{ "footerContactTitle"|t }}</div>
+				<div class="o-wysiwyg-small | font-brand-book text-base mt-2">{{ options.footer_block_contact }}</div>
+			</div>
+
+			<div class="order-1 flex-1 text-center  | md:order-2">
+				<a href="{{ home_url }}" class="transition duration-150 ease-in | hover:opacity-50">
+					<svg class="icon icon-logo-hera o-heading text-current">
+						<use xlink:href=" {{ sprite }}#icon-logo-hera"></use>
+					</svg>
+				</a>
+			</div>
+
+			<div class="order-2 | md:w-50 md:ml-auto md:order-3">
+				<div class="flex justify-center mt-8 | md:mt-0 md:block">
+
+					<!-- Begin Mailchimp Signup Form -->
+					<div id="mc_embed_signup">
+						<form action="https://heraspirits.us1.list-manage.com/subscribe/post?u=5308015677adbb4758eadbc04&amp;id=0f5354e344" method="post"
+							id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+							<div id="mc_embed_signup_scroll">
+								<label for="mce-EMAIL" class="text-md uppercase">{{ "footerNewsltterTitle"|t }}</label>
+								<input type="email" value="" name="EMAIL" class="email | mt-2 rounded h-6 border-0 py-0 px-2 w-full text-base bg-beige-1 text-black" id="mce-EMAIL" placeholder="{{ "footerNewsltterInputPlaceholder"|t }}" required>
+								<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true">
+									<input type="text" name="b_5308015677adbb4758eadbc04_0f5354e344" tabindex="-1" value="">
+								</div>
+
+								<div class="flex items-center mt-3">
+									<input type="submit" value="{{ "footerNewsltterBtnSubmit"|t }}" name="subscribe" id="mc-embedded-subscribe"
+									class="bg-transparent uppercase text-base cursor-pointer transition duration-150 ease-out hover:opacity-75">
+									<div class="flex ml-auto">
+										<a href="{{ options.facebook }}" target="_blank" class="transition duration-150 ease-in mr-2 | hover:opacity-50">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+										<a href="{{ options.Instagram  }}" target="_blank" class="transition duration-150 ease-in | hover:opacity-50">
+											<i class="fab fa-instagram"></i>
+										</a>
+									</div>
+								</div>
+						
+							</div>
+						</form>
+					</div>
+					<!--End mc_embed_signup-->
+				</div>
+			</div>
+
+		</div>
+
+		<div class="footer-note | items-center mt-8 text-center leading-normal font-brand-book | md:flex md:mt-16">
+
+			<p class="text-sm uppercase">{{ "footerCopyRight"|t }} <strong>{{ 'now' | date('Y') }}</strong></p>
+			<div class="mt-1 | md:mt-4 md:flex md:items-center md:ml-auto">
+				<p class="text-sm uppercase md:mr-4">{{ "footerNoteDev"|t }}</p>
+				<svg class="icon icon-logo-p text-8 text-current">
+					<use xlink:href=" {{ sprite }}#icon-logo-p"></use>
+				</svg>
+			</div>
+
+		</div>
+
+	</div>
+</footer>

@@ -1,0 +1,91 @@
+<section id="{{ block.section_id|default }}" class="js-show-on-scroll section-recipes">
+
+    <div class=" container-site | relative">
+
+        <div class="o-tag-section mb-4 | lg:mb-0 lg:absolute lg:top-40 lg:right-0">{{ block.section_tag }}</div>
+
+        <!-- navigation buttons mobile -->
+        {% if recipesSlider|length > 1 %}
+        <div class="flex absolute top-0 right-4 z-20 | lg:hidden">
+
+            <div class="swiper-button-prev-custom mr-6">
+                <svg class="icon icon-arrow-left text-black">
+                    <use xlink:href="{{ sprite }}#icon-arrow-left"></use>
+                </svg>
+            </div>
+            <div class="swiper-button-next-custom">
+                <svg class="icon icon-arrow-right  text-black">
+                    <use xlink:href="{{ sprite }}#icon-arrow-right"></use>
+                </svg>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="swiper-recipes swiper-container">
+
+            <div class="swiper-wrapper">
+                {% for slide in recipesSlider %}
+                <div class="swiper-slide">
+
+                    <div class="lg:flex lg:items-center lg:-mx-8">
+
+                        <div class="swiper-recipes-image overflow-hidden | lg:max-h-full lg:w-1/2 lg:px-8 lg:overflow-visible">
+                            <img src="{{ Image(slide.meta('image')).src|resize(785, 975) }}" alt="" />
+                        </div>
+
+                        <div class="mt-4 | lg:mt-0 lg:w-1/2 lg:px-8">
+
+                            <h3 class="swiper-recipes-title o-heading">{{ slide.title_custom|wpautop }}</h3>
+                            <div class="swiper-recipes-text o-wysiwyg-simple | font-brand-book text-lg  mt-4 | lg:mt-6">{{ slide.presentation|wpautop }}</div>
+
+                            <div class="swiper-recipes-block xl:ml-12">
+                                <div class="lg:flex lg:mt-16 lg:-mx-3">
+
+                                    <div class="lg:w-5/12 lg:px-3">
+                                        <h4 class="text-sm uppercase mt-4 | lg:mt-0">{{ "SliderRecipesIngredients"|t }}</h4>
+                                        <div class="o-wysiwyg-simple | uppercase mt-3 text-base">{{ slide.ingredients }}</div>
+
+                                        <h4 class="text-sm uppercase mt-4 | lg:mt-8">{{ "SliderRecipesTools"|t }}</h4>
+                                        <div class="o-wysiwyg-simple | uppercase mt-3 text-base">{{ slide.tools }}</div>
+                                    </div>
+
+                                    <div class="lg:w-5/12 lg:px-3">
+                                        <h4 class="text-sm uppercase mt-4 | lg:mt-0">{{ "SliderRecipesSteps"|t }}</h4>
+                                        <div class="o-wysiwyg-simple | uppercase mt-3 text-base">{{ slide.steps }}</div>
+
+                                        <h4 class="text-sm uppercase mt-4 | lg:mt-8">{{ "SliderRecipesNotes"|t }}</h4>
+                                        <div class="o-wysiwyg-simple | uppercase mt-3 text-base">{{ slide.notes }}</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- navigation buttons desktop -->
+            {% if recipesSlider|length > 1 %}
+            <div class=" | lg:flex justify-end mt-4 w-1/2 -mx-8">
+
+                <div class="swiper-button-prev-custom mr-6">
+                    <svg class="icon icon-arrow-left text-black">
+                        <use xlink:href="{{ sprite }}#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <div class="swiper-button-next-custom">
+                    <svg class="icon icon-arrow-right  text-black">
+                        <use xlink:href="{{ sprite }}#icon-arrow-right"></use>
+                    </svg>
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+</section>

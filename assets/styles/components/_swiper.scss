@@ -1,0 +1,231 @@
+/* Common
+-------------------------------------------- */
+.swiper-button-next-custom,
+.swiper-button-prev-custom {
+  @apply transition duration-100 ease-in cursor-pointer;
+
+  &:hover {
+    @apply opacity-70;
+  }
+  
+  &.swiper-button-disabled {
+    @apply opacity-50;
+  }
+
+  .icon {
+    @apply text-7;
+  }
+
+}
+
+/* swiper-news
+-------------------------------------------- */
+.swiper-news {
+  @apply overflow-visible #{!important};
+
+  // .swiper-slide {
+  //   width: 680px;
+  // }
+
+}
+
+/* swiper-recipes
+-------------------------------------------- */
+.swiper-recipes {
+  $durationSlide: 400;
+
+  .swiper-recipes-title,
+  .swiper-recipes-text,
+  .swiper-recipes-image,
+  .swiper-recipes-block  {
+    @apply opacity-0 transform-gpu transition duration-500 ease-out translate-x-10 delay-300;
+  }
+
+  .swiper-recipes-image {
+    transition-delay: $durationSlide + 0ms;
+  }
+
+  .swiper-recipes-title {
+    transition-delay: $durationSlide + 150ms;
+  }
+
+  .swiper-recipes-text {
+    transition-delay: $durationSlide + 300ms;
+  }
+
+  .swiper-recipes-block {
+    transition-delay: $durationSlide + 450ms;
+  }
+
+  .swiper-slide  {
+
+    &.swiper-slide-duplicate-active,
+    &.swiper-slide-active {
+
+      .swiper-recipes-title,
+      .swiper-recipes-text,
+      .swiper-recipes-image,
+      .swiper-recipes-block {
+        @apply opacity-100 translate-x-0;
+      }
+
+    }
+
+  }
+   
+}
+
+
+
+/* hero
+-------------------------------------------- */
+.swiper-hero {
+  $durationSlide: 300;
+
+  .swiper-hero-title,
+  .swiper-hero-text,
+  .swiper-hero-logo,
+  .swiper-hero-image {
+    @apply opacity-0 transform-gpu transition duration-500 ease-out translate-x-10 delay-300;
+  }
+
+  .swiper-hero-title {
+    transition-delay: $durationSlide + 0ms;
+  }
+
+  .swiper-hero-text {
+    transition-delay: $durationSlide + 150ms;
+  }
+
+  .swiper-hero-logo {
+    transition-delay: $durationSlide + 200ms;
+  }
+
+  .swiper-hero-image {
+    transition-delay: $durationSlide + 300ms;
+  }
+
+  .swiper-slide  {
+
+    &.swiper-slide-duplicate-active,
+    &.swiper-slide-active {
+
+      .swiper-hero-title,
+      .swiper-hero-text,
+      .swiper-hero-logo,
+      .swiper-hero-image {
+        @apply opacity-100 translate-x-0;
+      }
+
+    }
+
+  }
+
+}
+
+/* base
+-------------------------------------------- */
+.swiper-base {
+  $durationSlide: 600;
+
+  .swiper-base-title,
+  .swiper-base-text,
+  .swiper-base-image {
+    @apply opacity-0 transform-gpu transition duration-500 ease-out translate-x-10 delay-300;
+  }
+
+  .swiper-base-title {
+    transition-delay: $durationSlide + 150ms;
+  }
+
+  .swiper-base-text {
+    transition-delay: $durationSlide + 300ms;
+  }
+  
+  .swiper-base-image {
+    transition-delay: $durationSlide + 0ms;
+  }
+
+  .swiper-slide  {
+
+    &.swiper-slide-duplicate-active,
+    &.swiper-slide-active {
+
+      .swiper-base-title,
+      .swiper-base-text,
+      .swiper-base-image {
+        @apply opacity-100 translate-x-0;
+      }
+
+    }
+
+  }
+
+}
+
+/* products
+-------------------------------------------- */
+.swiper-products {
+  $durationSlide: 500;
+
+  .swiper-products-block1,
+  .swiper-products-block2 {
+    @apply opacity-0 transform-gpu transition duration-500 ease-out translate-x-10 delay-300;
+  }
+
+  .swiper-products-image {
+    @apply opacity-0 transform-gpu transition duration-500 ease-out translate-x-10 delay-300;
+  }
+
+
+
+  .swiper-products-block1 {
+    transition-delay: $durationSlide + 150ms;
+  }
+
+  .swiper-products-block2 {
+    transition-delay: $durationSlide + 300ms;
+  }
+  
+  .swiper-products-image {
+    transition-delay: $durationSlide + 450ms;
+
+
+    // @screen xs {
+    //   max-height: calc(100vh - 200px);
+    // }
+
+  }
+
+  .swiper-slide  {
+
+    &.swiper-slide-duplicate-active,
+    &.swiper-slide-active {
+
+      .swiper-products-block1,
+      .swiper-products-block2 {
+        @apply opacity-100 translate-x-0;
+      }
+
+      .swiper-products-image {
+        @apply opacity-100 translate-x-0;
+
+        @screen lg {
+          @apply -translate-x-15;
+        }
+
+        @media screen and (min-width: 1025px) {
+          @apply -translate-x-35;
+        }
+
+        @media screen and (min-width: 1100px) {
+          @apply -translate-x-25;
+        }
+
+      }
+
+    }
+
+  }
+
+}

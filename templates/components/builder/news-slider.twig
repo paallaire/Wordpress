@@ -1,0 +1,73 @@
+<section id="{{ block.section_id|default }}" class="js-show-on-scroll section-news | bg-pink-1 py-15 pt-20 | md:py-20">
+
+    <div class="container-site | relative">
+
+        <div class="o-tag-section | lg:absolute lg:top-0 lg:-right-2">{{ block.section_tag }}</div>
+        <h2 class="o-heading | mb-6 | lg:mb-10">{{ block.title }}</h2>
+
+        <!-- navigation buttons mobile -->
+        {% if newsSlider|length > 1 %}
+        <div class="flex absolute top-12 right-4 z-20 | lg:hidden">
+
+            <div class="swiper-button-prev-custom mr-6">
+                <svg class="icon icon-arrow-left text-black">
+                    <use xlink:href="{{ sprite }}#icon-arrow-left"></use>
+                </svg>
+            </div>
+            <div class="swiper-button-next-custom">
+                <svg class="icon icon-arrow-right  text-black">
+                    <use xlink:href="{{ sprite }}#icon-arrow-right"></use>
+                </svg>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="swiper-news swiper-container">
+            <div class="swiper-wrapper">
+                {% for slide in newsSlider %}
+                <div class="swiper-slide">
+
+                    <div class="md:flex md:items-center md:-mx-6">
+                        <div class="max-h-60 overflow-hidden | md:max-h-full md:w-7/12 md:px-6 md:overflow-visible">
+                            <img src="{{ Image(slide.meta('image')).src|resize(720, 960) }}" alt="" />
+                        </div>
+                        <div class="mt-4 | md:flex-1 md:mt-0 md:w-5/12 md:px-6">
+                            <h3 class="o-subheading | mb-4 | md:mb-8">{{ slide.title }}</h3>
+                            <div class="text-sm uppercase font-brand-book">{{ slide.meta('author') }}</div>
+                            <time class="text-sm uppercase font-brand-book mt-1">{{ slide.date|date("d/m/Y"|t) }}</time>
+                            <div class="o-wysiwyg-small | font-brand-book uppercase text-base mt-4">{{ slide.excerpt }}</div>
+
+                            <a href="{{ slide.url }}" class="o-link-rotation | flex items-center mt-4 | md:mt-8">
+                                <span class="underline">{{ "SliderNewsReadArticle"|t }}</span>
+                                <svg class="icon icon-plus text-base text-black ml-10">
+                                    <use xlink:href="{{ sprite }}#icon-plus"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- navigation buttons desktop -->
+            {% if newsSlider|length > 1 %}
+            <div class="justify-end hidden | md:flex md:mt-4">
+                <div class="swiper-button-prev-custom mr-6">
+                    <svg class="icon icon-arrow-left text-black">
+                        <use xlink:href="{{ sprite }}#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <div class="swiper-button-next-custom">
+                    <svg class="icon icon-arrow-right  text-black">
+                        <use xlink:href="{{ sprite }}#icon-arrow-right"></use>
+                    </svg>
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>

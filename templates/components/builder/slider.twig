@@ -1,0 +1,50 @@
+<section id="{{ block.section_id|default }}" class="js-show-on-scroll">
+
+    <div class="container-site | relative">
+
+        <div class="o-tag-section mb-4 | lg:mb-0 lg:absolute lg:bottom-0 lg:left-0">{{ block.section_tag }}</div>
+
+        <div class="swiper-base swiper-container | lg:w-16/18 lg:mx-auto">
+            <div class="swiper-wrapper">
+                {% for slide in block.slider %}
+                <div class="swiper-slide">
+
+                    <div class="lg:flex lg:items-center">
+
+                        <div class="overflow-hidden | lg:max-h-full lg:overflow-visible lg:w-9/18">
+                            <img class="swiper-base-image" src="{{ Image(slide.image).src|resize(660, 595) }}" alt="" />
+                        </div>
+
+                        <div class="mt-4 | lg:mt-0 lg:w-6/18 lg:ml-1/18">
+                            <h3 class="swiper-base-title o-heading">{{ slide.title }}</h3>
+                            <div class="swiper-base-text o-wysiwyg-simple | text-base mt-4 | lg:mt-8">{{ slide.text }}</div>
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- navigation buttons -->
+            {% if block.slider|length > 1 %}
+            <div class="hidden | lg:flex justify-end mt-8 w-9/18">
+
+                <div class="swiper-button-prev-custom mr-6">
+                    <svg class="icon icon-arrow-left text-black">
+                        <use xlink:href="{{ sprite }}#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <div class="swiper-button-next-custom">
+                    <svg class="icon icon-arrow-right  text-black">
+                        <use xlink:href="{{ sprite }}#icon-arrow-right"></use>
+                    </svg>
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>

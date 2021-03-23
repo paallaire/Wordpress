@@ -1,0 +1,71 @@
+<section id="{{ block.section_id|default }}" class="js-show-on-scroll">
+
+    <div class="container-site | relative">
+
+        <h2 class="o-tag-section | lg:absolute lg:top-40 lg:right-0">{{ block.section_tag }}</h2>
+
+        <div class="mt-4 | lg:mt-0 | xl:ml-1/18">
+            <div class="swiper-products swiper-container swiper-slider-number-{{ block.items|length }}">
+                <div class="swiper-wrapper">
+                    {% for slide in block.items %}
+                    <div class="swiper-slide relative | xs:flex | lg:flex-col">
+
+                        <div class="xs:w-1/2 | md:w-auto">
+
+                            <div class="swiper-products-block1 | order-1 | lg:absolute lg:z-10 lg:top-0 lg:left-0 ">
+                                <h3 class="o-heading | max-w-60">{{ slide.title_custom|wpautop }}</h3>
+                                <div class="o-wysiwyg-simple | text-base mt-4 | md:max-w-60 md:mt-8 | xl:ml-10">{{ slide.description|wpautop }}</div>
+                            </div>
+
+                            <div class="swiper-products-block2 | order-2 mt-4 | md:max-w-70 | lg:absolute lg:bottom-20 lg:right-0 lg:z-10">
+                                <div class="font-medium">
+                                    <span class="text-md">{{ slide.price }}</span>
+                                    —
+                                    <span class="text-base">{{ slide.meta('format') }}</span>
+                                </div>
+
+                                <div class="o-wysiwyg-simple | text-base mt-4">{{ slide.presentation }}</div>
+
+                                <a href="{{ slide.link_buy }}" target="_blank" class="o-link-rotation | flex items-center mt-4 | md:mt-8">
+                                    <span class="underline">{{ "SliderProductsBuy"|t }}</span>
+                                    <svg class="icon icon-plus text-base text-black ml-10">
+                                        <use xlink:href="{{ sprite }}#icon-plus"></use>
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="xs:w-1/2 | md:w-auto">
+                            <img src="{{ Image(slide.meta('image')).src|resize(600, 945) }}" alt=""
+                                class="swiper-products-image | mx-auto order-3 mt-12 | md:block md:mt-0" />
+                        </div>
+
+
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- navigation buttons -->
+
+                {% if block.items|length > 1 %}
+                <div class="hidden | lg:flex justify-center mt-8">
+                    <div class="swiper-button-prev-custom mr-6">
+                        <svg class="icon icon-arrow-left text-black">
+                            <use xlink:href="{{ sprite }}#icon-arrow-left"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next-custom">
+                        <svg class="icon icon-arrow-right  text-black">
+                            <use xlink:href="{{ sprite }}#icon-arrow-right"></use>
+                        </svg>
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+
+
+    </div>
+</section>

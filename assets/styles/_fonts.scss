@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Pragmatica';
+    src: url('../fonts/Pragmatica-Medium.woff2') format('woff2'),
+        url('../fonts/Pragmatica-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pragmatica';
+    src: url('../fonts/Pragmatica-MediumObl.woff2') format('woff2'),
+        url('../fonts/Pragmatica-MediumObl.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pragmatica Book';
+    src: url('../fonts/Pragmatica-BookObl.woff2') format('woff2'),
+        url('../fonts/Pragmatica-BookObl.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pragmatica Book';
+    src: url('../fonts/Pragmatica-Book.woff2') format('woff2'),
+        url('../fonts/Pragmatica-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

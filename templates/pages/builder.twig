@@ -1,0 +1,39 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+<div class="o-page-builder space-y-20 | lg:space-y-40">
+
+    {% for block in post.meta('blocks') %}
+
+    {% if block.acf_fc_layout == 'hero_slider' %}
+
+    {% include './templates/components/builder/hero-slider.twig' with {} %}
+
+    {% elseif block.acf_fc_layout == 'slider' %}
+
+    {% include './templates/components/builder/slider.twig' with {} %}
+
+    {% elseif block.acf_fc_layout == 'news_slider' %}
+
+    {% include './templates/components/builder/news-slider.twig' with {} %}
+
+    {% elseif block.acf_fc_layout == 'recipes_slider' %}
+
+    {% include './templates/components/builder/recipes-slider.twig' with {} %}
+
+    {% elseif block.acf_fc_layout == 'products_slider' %}
+
+    {% include './templates/components/builder/products-slider.twig' with {} %}
+
+    {% elseif block.acf_fc_layout == 'image_slider_with_text' %}
+
+    {% include './templates/components/builder/image-slider-text.twig' with {} %}
+
+    {% endif %}
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

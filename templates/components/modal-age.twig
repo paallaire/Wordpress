@@ -1,0 +1,23 @@
+<div id="modal-age" class="p-4 flex flex-col fixed top-0 left-0 w-full h-screen bg-orange-1 z-50">
+
+    <div class="w-25">
+        <svg class="icon icon-logo-hera o-heading text-20">
+            <use xlink:href=" {{ sprite }}#icon-logo-hera"></use>
+        </svg>
+    </div>
+
+    <div class="flex-1 flex justify-center items-center">
+
+        <div class="text-center uppercase">
+            <p class="text-20 md:text-40">{{ "modalAgeTitle"|t }}</p>
+            <p class="mt-4 text-10 leading-normal">{{ "modalAgeText"|t }}</p>
+            <div class="text-10 my-10 space-x-5">
+                <button id="modal-age-yes">{{ "Yes"|t }}</button>
+                <button>{{ "No"|t }}</button>
+            </div>
+            <p class="text-base leading-normal">{{ "modalAgeNote"|t }}</p>
+        </div>
+
+    </div>
+
+</div>

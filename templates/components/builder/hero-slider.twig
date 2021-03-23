@@ -1,0 +1,85 @@
+<section id="{{ block.section_id|default }}" class="">
+
+    <div class="container-site-large | relative">
+
+        <div class="swiper-hero swiper-container">
+            <div class="swiper-wrapper">
+                {% for slide in block.slider %}
+                <div class="swiper-slide {{ loop.first ? 'swiper-slide-active' : '' }}">
+
+                    <div class="flex flex-col | lg:flex-row">
+
+                        <div class="order-2 mt-4 | lg:mt-0 lg:order-1 lg:w-5/18">
+                            <h3 class="swiper-hero-title o-heading relative z-10 | lg:w-100 | lg:mt-30 | xl:mt-40">{{ slide.title }}</h3>
+                            <div class="swiper-hero-text o-wysiwyg-simple | text-base mt-4 | lg:max-w-60 lg:mt-8">{{ slide.text }}</div>
+
+                            <div class="swiper-hero-logo | flex items-center mt-6 | xl:z-10 xl:absolute xl:bottom-40 xl:left-0">
+                                <div class="mr-4">{{ "BuildInQuebec"|t }}</div>
+                                <svg class="icon icon-logo-quebec text-8 text-black">
+                                    <use xlink:href="{{ sprite }}#icon-logo-quebec"></use>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <div class="order-1 relative | lg:max-h-full lg:overflow-visibl lg:order-2 lg:w-13/18">
+
+                            <img class=" swiper-hero-image" src="{{ Image(slide.image).src|resize(1025, 915) }}" alt="" />
+                    
+                            <div class="flex justify-end mt-4 w-full | lg:hidden">
+                                <div class="swiper-button-prev-custom mr-6">
+                                    <svg class="icon icon-arrow-left text-black">
+                                        <use xlink:href="{{ sprite }}#icon-arrow-left"></use>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next-custom">
+                                    <svg class="icon icon-arrow-right  text-black">
+                                        <use xlink:href="{{ sprite }}#icon-arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- navigation buttons -->
+            {% if block.slider|length > 1 %}
+            <div class="mt-6 w-1/4 relative z-20">
+
+                <div class="hidden | lg:flex transform-gpu translate-x-full">
+                    <div class="swiper-button-prev-custom mr-6">
+                        <svg class="icon icon-arrow-left text-black">
+                            <use xlink:href="{{ sprite }}#icon-arrow-left"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next-custom">
+                        <svg class="icon icon-arrow-right  text-black">
+                            <use xlink:href="{{ sprite }}#icon-arrow-right"></use>
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+            {% endif %}
+
+        </div>
+
+
+
+    </div>
+
+    <div class="hidden | lg:block lg:fixed z-20 bottom-1/2 right-4">
+        <a href="{{ options.facebook }}" target="_blank" class="transition duration-150 ease-in text-black block mb-2 | hover:opacity-50">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="{{ options.Instagram  }}" target="_blank" class="transition duration-150 ease-in text-black block | hover:opacity-50">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+</section>

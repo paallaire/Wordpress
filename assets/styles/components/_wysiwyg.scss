@@ -1,0 +1,110 @@
+/* ==========================================================================
+#wysiwyg
+========================================================================== */
+$o-wysiwyg: '.o-wysiwyg';
+
+#{$o-wysiwyg}-simple {
+    //@apply leading-normal;
+    line-height: 1.7;;
+
+    /* spacing 
+    ----------------------------------------------- */
+    > * + * {
+        margin-top: 1em * 1;
+    }
+
+    > *:first-child {
+        @apply mt-0;
+    }
+
+    /* link 
+     ----------------------------------------------- */
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    /* paragraph 
+     ----------------------------------------------- */
+    p {
+
+        &:empty {
+            @apply hidden;
+        }
+
+    }
+
+    /* list 
+    ----------------------------------------------- */
+    ul {
+        @apply space-y-1;
+
+        li {
+            @apply relative;
+
+            &:before {
+                @apply mr-1;
+                content: '—';
+            }
+
+        }
+        
+    }
+
+}
+
+#{$o-wysiwyg}-small {
+    @apply leading-normal;
+
+    /* spacing 
+    ----------------------------------------------- */
+    > * + * {
+        margin-top: 1em * 0.5;
+    }
+
+    > *:first-child {
+        @apply mt-0;
+    }
+
+    /* link 
+     ----------------------------------------------- */
+     a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    /* paragraph 
+     ----------------------------------------------- */
+    p {
+
+        &:empty {
+            @apply hidden;
+        }
+
+    }
+
+    /* list 
+    ----------------------------------------------- */
+    ul {
+        @apply space-y-1;
+
+        li {
+            @apply relative;
+
+            &:before {
+                @apply mr-1;
+                content: '—';
+            }
+
+        }
+        
+    }
+
+}
+
