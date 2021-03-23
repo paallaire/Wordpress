@@ -1,4 +1,4 @@
-# Hera
+# Theme "Name"
 
 ## Installation
 
